@@ -1,0 +1,124 @@
+header, main{
+    padding: 0 20px;
+    background-color: black;
+    color: white;
+}
+nav{
+    padding: 20px;
+}
+.logo{
+    text-transform: uppercase;
+}
+nav p{
+    margin: auto;
+    margin-bottom: 20px;
+}
+li{
+    list-style-type: none;
+}
+ul li a, nav p{
+    display: flex;
+    justify-content: center;
+}
+main{
+    padding: 0 20px;
+}
+main img{
+    width: 100%;
+}
+.imageFlottanteDroite, .imageFlottanteGauche{
+    margin-bottom: 30px;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    
+    /* TABLE DES STYLES */
+    /*                  */
+    /* GLOBALS          */
+    /* HEADER & NAV     */
+    /* MAIN             */
+    /*                  */
+    /*                  */
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    h1,h2{
+        margin: 40px 0;
+    }
+
+    /* HEADER & MENU DE NAVIGATION */
+
+    header{
+        background-color: black;
+        color: white;
+    }
+
+    header nav{
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        padding: 20px 0;
+        justify-content: center;
+    }
+
+    header nav .logo{
+        flex: 1;
+        text-transform: uppercase;
+        width: fit-content;
+    }
+
+    header nav p{
+        border: 2px solid white;
+        width: fit-content;
+        padding: 15px 30px;
+        margin: 0 30px;
+    }
+    nav li:nth-last-of-type(4) a{
+        padding-right: 0;
+    }
+
+    header nav ul{
+        display: flex;
+        padding: 0;
+    }
+
+    header nav li{
+        list-style-type: none;
+    }
+
+    header nav ul li a{
+        display: block;
+        padding: 15px 30px;
+        color: white;
+    }
+
+    /* MAIN */
+
+    main{
+        max-width: 1150px;
+        margin: auto;
+    }
+
+    main img{
+        width: 500px;
+    }
+
+    main .imageFlottanteDroite{
+        float: right;
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }
+
+    main .imageFlottanteGauche{
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 15px;
+    }
+}
