@@ -25,17 +25,17 @@ p, a {
 
 header {
   background-color: #151B2B;
-  padding: 3rem;
+  height: 100vh;
+  display: flex;
 }
 header .header {
+  display: flex;
   position: relative;
   max-width: 80rem;
-  margin: 0 auto;
+  margin: auto;
 }
 header .header .logoQ {
   position: absolute;
-  top: 2rem;
-  left: 10rem;
 }
 header h1, header h3, header p {
   color: white;
@@ -52,7 +52,9 @@ header .headerBody {
 }
 header .textHeader {
   margin: auto;
-  width: 400px;
+  max-width: 400px;
+  padding: 1rem;
+  z-index: 1;
 }
 header .textHeader h1, header .textHeader h3, header .textHeader iframe {
   margin: 1.5rem 0;
@@ -93,6 +95,7 @@ body {
 }
 
 main {
+  padding: 1rem;
   margin: 0 auto;
 }
 main .articlesolo {
@@ -113,14 +116,14 @@ main .articlesolo p {
   width: 50rem;
   max-width: 100%;
 }
-main .articlesolo .usage {
-  position: relative;
-}
 main .articlesolo .usage .UText {
-  position: absolute;
-  left: 39vw;
-  top: -25px;
-  width: 36rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  background: url("../../src/img/unknown.png");
+  height: 18rem;
+}
+main .articlesolo .usage .UText p {
+  width: 70vw;
 }
 main .articlesolo .code {
   margin: 0 auto;
@@ -315,91 +318,12 @@ footer .foot span {
   color: lightblue;
 }
 
-@media screen and (max-width: 3100px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 41vw;
-  }
-}
-@media screen and (max-width: 2800px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 40vw;
-  }
-}
-@media screen and (max-width: 2500px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 39vw;
-  }
-}
-@media screen and (max-width: 2300px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 38vw;
-  }
-}
-@media screen and (max-width: 2100px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 37vw;
-  }
-}
-@media screen and (max-width: 1900px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 34vw;
-  }
-}
-@media screen and (max-width: 1700px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 32vw;
-  }
-}
-@media screen and (max-width: 1500px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 29vw;
-  }
-}
-@media screen and (max-width: 1400px) {
-  header .header .logoQ {
-    left: 12vw;
-  }
-}
-@media screen and (max-width: 1300px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 25vw;
-  }
-
-  header .header .logoQ {
-    left: 9vw;
-  }
-}
-@media screen and (max-width: 1200px) {
-  header .header .logoQ {
-    left: 6vw;
-  }
-}
-@media screen and (max-width: 1100px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 19vw;
-  }
-
-  header .header .logoQ {
-    left: 3vw;
-  }
-}
 @media screen and (max-width: 1035px) {
-  header .header .logoQ {
-    left: 0vw;
-  }
-
   .imgheader {
-    display: none;
+    position: absolute;
+    z-index: 0;
+    top: -15vh;
+    left: -6vw;
   }
 
   .navs {
@@ -407,10 +331,6 @@ footer .foot span {
   }
 }
 @media screen and (max-width: 900px) {
-  header .header .logoQ {
-    top: 0;
-  }
-
   header .headerBody {
     padding-top: 3rem;
   }
@@ -424,57 +344,30 @@ footer .foot span {
     display: block;
     margin: 0 auto;
   }
-
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 14vw;
-    top: -3rem;
-  }
 }
 @media screen and (max-width: 700px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 16vw;
-    top: -4rem;
-    width: 28rem;
-  }
-}
-@media screen and (max-width: 700px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 14vw;
-    top: -6rem;
-  }
-
   main .articlesolo .code {
     overflow: auto;
   }
 }
-@media screen and (max-width: 550px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 9vw;
-    top: -6rem;
-  }
-}
 @media screen and (max-width: 700px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 8vw;
-    top: -7rem;
-    width: 90vw;
+  header .imgheader {
+    display: none;
   }
 }
 @media screen and (max-width: 450px) {
-  main .articlesolo .usage .UText {
-    position: absolute;
-    left: 8vw;
-    top: -9rem;
-    width: 90vw;
-  }
-
   article:last-of-type img {
     width: 100vw;
+  }
+}
+@media screen and (max-height: 700px) {
+  .imgheader {
+    max-height: 100vh;
+  }
+}
+@media screen and (max-height: 400px) {
+  header .header .logoQ {
+    display: none;
   }
 }
 
